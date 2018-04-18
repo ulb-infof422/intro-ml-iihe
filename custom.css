@@ -1,0 +1,39 @@
+.reveal p {
+font-family: 'Raleway', sans-serif;
+#color: #2d28cc;
+}
+
+table {border: none;}
+
+div.footer {
+font-size:14pt;
+font-style: italic;
+color: #4aaeee;
+text-align: center
+}
+
+div.left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+div.right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: left;
+  z-index:-10;
+  width:50%;
+}
+
+.twocolumn {
+   display: grid;
+   grid-template-columns: 45% 45% 10%;
+   grid-template-rows: 100%;
+   #grid-template-columns: 1fr 1fr 1fr;
+   #grid-gap: 10px;
+   #text-align: left;
+}
