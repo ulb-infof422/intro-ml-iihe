@@ -11911,7 +11911,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="GitHub-repo-with-materials:">GitHub repo with materials:<a class="anchor-link" href="#GitHub-repo-with-materials:">&#182;</a></h3><p><a href="https://github.com/jrbourbeau/madpy-ml-sklearn-2018">https://github.com/jrbourbeau/madpy-ml-sklearn-2018</a> <br></p>
+<h3 id="GitHub-repo-with-materials:">GitHub repo with materials:<a class="anchor-link" href="#GitHub-repo-with-materials:">&#182;</a></h3><p><a href="https://github.com/zhampel/intro-ML-iihe">https://github.com/zhampel/intro-ML-iihe</a> <br></p>
 <h3 id="Slides:">Slides:<a class="anchor-link" href="#Slides:">&#182;</a></h3><p><a href="https://zhampel.github.io/intro-machine-learning">https://zhampel.github.io/intro-machine-learning</a></p>
 <h3 id="Contact:">Contact:<a class="anchor-link" href="#Contact:">&#182;</a></h3><p>E-mail: zhampel@wipac.wisc.edu</p>
 <p>GitHub: <a href="https://github.com/zhampel">zhampel</a></p>
@@ -11949,7 +11949,6 @@ a.anchor-link {
 <h2 id="Keras-Workshop">Keras Workshop<a class="anchor-link" href="#Keras-Workshop">&#182;</a></h2><ul>
 <li>Simple Neural Nets</li>
 <li>Hyperparameters</li>
-<li>Workflow</li>
 </ul>
 
 </div>
@@ -12165,7 +12164,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13131,8 +13130,8 @@ Image source: <a href="http://www.bogotobogo.com/python/scikit-learn/images/Neur
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Quantifying-Performance">Quantifying Performance<a class="anchor-link" href="#Quantifying-Performance">&#182;</a></h2><ul>
 <li>Validation score: a measure of quality<ul>
-<li>Classification: fraction of <strong>correct</strong> identifications (classification)</li>
-<li>Regression: mean accuracy (regression)</li>
+<li>Classification: fraction of <strong>correct</strong> identifications</li>
+<li>Regression: mean accuracy</li>
 </ul>
 </li>
 </ul>
@@ -13417,7 +13416,7 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Convolutional-NN">Convolutional NN<a class="anchor-link" href="#Convolutional-NN">&#182;</a></h2><ul>
 <li>Primarily used in image analysis<ul>
-<li>Convolutions accounts for neighboring pixels</li>
+<li>Convolutions account for neighboring pixels</li>
 <li>Great for identifying sub-features in data</li>
 </ul>
 </li>
@@ -13458,6 +13457,24 @@ Image source: [Introduction to CNN for Vision Tasks](https://pythonmachinelearni
 <li>Single Layer</li>
 <li>M-Hidden Layers</li>
 <li>Dropout in M Layers</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Keras-Tutorial">Keras Tutorial<a class="anchor-link" href="#Keras-Tutorial">&#182;</a></h2><ul>
+<li>Python API for running <a href="https://www.tensorflow.org/">TensorFlow</a></li>
+<li>TensorFlow: Google's symolic library for tensor math</li>
+<li>Online playground <a href="https://playground.tensorflow.org/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,2&amp;seed=0.21422&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=false&amp;xSquared=false&amp;ySquared=false&amp;cosX=false&amp;sinX=false&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false">here</a></li>
+<li>Keras more intuitive functionality to develop Deep Learning models<ul>
+<li>Building blocks: layers, objective and activation functions, optimizers</li>
+<li>Distributed training of networks via GPUs and GPU clusters</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -13514,9 +13531,34 @@ Image source: [Introduction to CNN for Vision Tasks](https://pythonmachinelearni
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="First-Keras-Script">First Keras Script<a class="anchor-link" href="#First-Keras-Script">&#182;</a></h2><p>Let's go train a single later NN on the MNIST data set: 70k handwritten (labelled) digits.</p>
+<p><img src="images/MnistExamples.png" alt="mnist"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="First-Keras-Script">First Keras Script<a class="anchor-link" href="#First-Keras-Script">&#182;</a></h2><p>We're going to define:</p>
+<ul>
+<li>10 outputs (10 digits)</li>
+<li>Split training and validation set: 80 / 20</li>
+<li>Mini-batch sets of 128 samples</li>
+<li>Objective function: categorical cross-entropy</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
@@ -13533,32 +13575,14 @@ Image source: [Introduction to CNN for Vision Tasks](https://pythonmachinelearni
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Using TensorFlow backend.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Network &amp; training</span>
-<span class="n">N_EPOCH</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">N_EPOCH</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#200</span>
 <span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="n">VERBOSE</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">N_CLASSES</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># No. outputs = No. digits</span>
@@ -13573,10 +13597,10 @@ Image source: [Introduction to CNN for Vision Tasks](https://pythonmachinelearni
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Data -&gt; shuffled and split between training and test sets</span>
@@ -13621,10 +13645,10 @@ Image source: [Introduction to CNN for Vision Tasks](https://pythonmachinelearni
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Convert class vectors to binary class matrices</span>
@@ -13658,9 +13682,9 @@ Image source: [Introduction to CNN for Vision Tasks](https://pythonmachinelearni
 <pre>_________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
-dense_1 (Dense)              (None, 10)                7850      
+dense_3 (Dense)              (None, 10)                7850      
 _________________________________________________________________
-activation_1 (Activation)    (None, 10)                0         
+activation_3 (Activation)    (None, 10)                0         
 =================================================================
 Total params: 7,850
 Trainable params: 7,850
@@ -13673,10 +13697,10 @@ _________________________________________________________________
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Train the model</span>
@@ -13708,71 +13732,63 @@ _________________________________________________________________
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 48000 samples, validate on 12000 samples
-Epoch 1/200
+Epoch 1/5
 48000/48000 [==============================] - 1s 29us/step - loss: 1.3633 - acc: 0.6796 - val_loss: 0.8904 - val_acc: 0.8246
-Epoch 2/200
-48000/48000 [==============================] - 1s 23us/step - loss: 0.7913 - acc: 0.8272 - val_loss: 0.6572 - val_acc: 0.8546
-Epoch 3/200
+Epoch 2/5
+48000/48000 [==============================] - 1s 28us/step - loss: 0.7913 - acc: 0.8272 - val_loss: 0.6572 - val_acc: 0.8546
+Epoch 3/5
 48000/48000 [==============================] - 1s 26us/step - loss: 0.6436 - acc: 0.8497 - val_loss: 0.5625 - val_acc: 0.8681
-Epoch 4/200
-48000/48000 [==============================] - 1s 29us/step - loss: 0.5717 - acc: 0.8602 - val_loss: 0.5098 - val_acc: 0.8765
-Epoch 5/200
-48000/48000 [==============================] - 1s 31us/step - loss: 0.5276 - acc: 0.8678 - val_loss: 0.4758 - val_acc: 0.8826
-Epoch 6/200
-48000/48000 [==============================] - 1s 26us/step - loss: 0.4973 - acc: 0.8726 - val_loss: 0.4515 - val_acc: 0.8866
-Epoch 7/200
-48000/48000 [==============================] - 1s 25us/step - loss: 0.4748 - acc: 0.8775 - val_loss: 0.4333 - val_acc: 0.8882
-Epoch 8/200
-48000/48000 [==============================] - 1s 30us/step - loss: 0.4574 - acc: 0.8803 - val_loss: 0.4189 - val_acc: 0.8920
-Epoch 9/200
-48000/48000 [==============================] - 2s 34us/step - loss: 0.4433 - acc: 0.8834 - val_loss: 0.4075 - val_acc: 0.8939
-Epoch 10/200
-48000/48000 [==============================] - 2s 32us/step - loss: 0.4317 - acc: 0.8850 - val_loss: 0.3977 - val_acc: 0.8966
-Epoch 11/200
-48000/48000 [==============================] - 1s 27us/step - loss: 0.4218 - acc: 0.8873 - val_loss: 0.3896 - val_acc: 0.8984
-Epoch 12/200
-48000/48000 [==============================] - 1s 28us/step - loss: 0.4134 - acc: 0.8888 - val_loss: 0.3827 - val_acc: 0.8995
-Epoch 13/200
-48000/48000 [==============================] - 1s 25us/step - loss: 0.4060 - acc: 0.8902 - val_loss: 0.3766 - val_acc: 0.9003
-Epoch 14/200
-48000/48000 [==============================] - 1s 27us/step - loss: 0.3995 - acc: 0.8918 - val_loss: 0.3712 - val_acc: 0.9013
-Epoch 15/200
-48000/48000 [==============================] - 1s 27us/step - loss: 0.3936 - acc: 0.8928 - val_loss: 0.3664 - val_acc: 0.9016
-Epoch 16/200
-48000/48000 [==============================] - 1s 29us/step - loss: 0.3884 - acc: 0.8945 - val_loss: 0.3621 - val_acc: 0.9031
-Epoch 17/200
-48000/48000 [==============================] - 1s 25us/step - loss: 0.3837 - acc: 0.8950 - val_loss: 0.3582 - val_acc: 0.9033
-Epoch 18/200
-48000/48000 [==============================] - 1s 30us/step - loss: 0.3794 - acc: 0.8962 - val_loss: 0.3546 - val_acc: 0.9039
-Epoch 19/200
-48000/48000 [==============================] - 1s 28us/step - loss: 0.3755 - acc: 0.8970 - val_loss: 0.3514 - val_acc: 0.9048
-Epoch 20/200
-48000/48000 [==============================] - 1s 27us/step - loss: 0.3718 - acc: 0.8979 - val_loss: 0.3485 - val_acc: 0.9053
-Epoch 21/200
-48000/48000 [==============================] - 2s 40us/step - loss: 0.3685 - acc: 0.8985 - val_loss: 0.3457 - val_acc: 0.9058
-Epoch 22/200
-48000/48000 [==============================] - 2s 34us/step - loss: 0.3653 - acc: 0.8995 - val_loss: 0.3431 - val_acc: 0.9058
-Epoch 23/200
-48000/48000 [==============================] - 1s 28us/step - loss: 0.3625 - acc: 0.8999 - val_loss: 0.3407 - val_acc: 0.9063
-Epoch 24/200
-48000/48000 [==============================] - 1s 26us/step - loss: 0.3598 - acc: 0.9008 - val_loss: 0.3385 - val_acc: 0.9070
-Epoch 25/200
-48000/48000 [==============================] - 1s 27us/step - loss: 0.3572 - acc: 0.9012 - val_loss: 0.3364 - val_acc: 0.9074
-Epoch 26/200
-48000/48000 [==============================] - 1s 26us/step - loss: 0.3548 - acc: 0.9019 - val_loss: 0.3345 - val_acc: 0.9084
-Epoch 27/200
-48000/48000 [==============================] - 1s 26us/step - loss: 0.3525 - acc: 0.9022 - val_loss: 0.3326 - val_acc: 0.9082
-Epoch 28/200
-48000/48000 [==============================] - 1s 28us/step - loss: 0.3504 - acc: 0.9032 - val_loss: 0.3311 - val_acc: 0.9090
-Epoch 29/200
-38272/48000 [======================&gt;.......] - ETA: 0s - loss: 0.3469 - acc: 0.9041</pre>
+Epoch 4/5
+48000/48000 [==============================] - 1s 26us/step - loss: 0.5717 - acc: 0.8602 - val_loss: 0.5098 - val_acc: 0.8765
+Epoch 5/5
+48000/48000 [==============================] - 1s 26us/step - loss: 0.5276 - acc: 0.8678 - val_loss: 0.4758 - val_acc: 0.8826
+10000/10000 [==============================] - 0s 34us/step
+Test score:  0.4802623610019684
+Test accuracy:  0.8824
+</pre>
 </div>
 </div>
 
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Multiple-Hidden-Layers">Multiple Hidden Layers<a class="anchor-link" href="#Multiple-Hidden-Layers">&#182;</a></h2><p>To add more hidden layers, add the following after the first input layer:</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 2nd layer</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">N_HIDDEN</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span> <span class="c1"># Can use other activation functions here</span>
+<span class="c1"># 3rd layer</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">N_HIDDEN</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span> <span class="c1"># Can use other activation functions here</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We also don't need so many iterations, so can try N_EPOCH = 20</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
