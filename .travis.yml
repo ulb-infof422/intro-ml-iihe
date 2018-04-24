@@ -12,25 +12,6 @@ install:
     - unzip master.zip
     - mv reveal.js-master reveal.js
 
-## install jupyter and get reveal.js as we will need it to build the website
-## from Travis
-#install:
-#    - sudo apt-get update
-#    - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-#    - bash miniconda.sh -b -p $HOME/miniconda
-#    - export PATH="$HOME/miniconda/bin:$PATH"
-#    - hash -r
-#    - conda config --set always_yes yes --set changeps1 no
-#    - conda update -q conda
-#    # Useful for debugging any issues with conda
-#    - conda info -a
-#    - conda env create --quiet --name test-environment --file environment.yml
-#    - source activate test-environment
-#    # Get reveal.js
-#    - wget https://github.com/hakimel/reveal.js/archive/master.zip
-#    - unzip master.zip
-#    - mv reveal.js-master reveal.js
-
 script:
     - jupyter nbconvert intro-machine-learning.ipynb --to slides --reveal-prefix=reveal.js
 
@@ -40,7 +21,7 @@ after_success: |
     git rm -rf --cached .
     mv intro-machine-learning.slides.html index.html
     git add -f --ignore-errors index.html images reveal.js
-    #git add -f --ignore-errors index.html img reveal.js
-    git -c user.name='travis' -c user.email='travis' commit -m init
+    git -c user.name='zhampel' -c user.email='zhampel@icecube.wisc.edu' commit -m init
+    #git -c user.name='travis' -c user.email='travis' commit -m init
     git push -f -q https://$GITHUB_USER:$GITHUB_API_KEY@github.com/$TRAVIS_REPO_SLUG gh-pages
     fi
